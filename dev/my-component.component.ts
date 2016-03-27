@@ -1,4 +1,6 @@
 import {Component} from 'angular2/core';
+import {TestComponent} from './test.component';
+import {OnInit} from 'angular2/core';
 
 @Component({
     selector: 'my-component',
@@ -12,12 +14,26 @@ import {Component} from 'angular2/core';
         <input type="text" #inputElement (keyup)="0">
         <br>
         <button [disabled]="inputElement.value !== 'yes'" >only enable if 'yes' was entered!</button>
+        <br>
+        <test></test>
     `,
     styleUrls: [
         'src/css/my-component.css',
     ],
+    directives: [
+        TestComponent,
+    ],
 })
 
-export class MyComponentComponent {
-    name = 'Kiga';
+export class MyComponentComponent implements OnInit{
+    name : string;
+
+    //constructor () {
+    //    this.name = "kiga";
+    //};
+
+    ngOnInit():any{
+        this.name = "kiga";
+    }
+
 }
