@@ -1,4 +1,6 @@
-# Angular 2 Udemy course
+# Angular 2 Udemy course 
+
+episode: Components
 
 ## Description
 This repository is my follow up to udemy angular 2 course
